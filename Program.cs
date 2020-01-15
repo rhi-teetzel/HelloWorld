@@ -4,18 +4,39 @@ namespace HelloWorld
 {
     class Program
     {
-        static void Main(string[] args)
-
-            
+        static void Main(string[] args)                   
         {
-            string yourName;
-            Console.WriteLine("Hello World! What is your name?");
+            string yourFirstName;
+            string yourLastName;
 
-            yourName = Console.ReadLine();
+            Console.WriteLine("Hello user, what is your first name?");
+            yourFirstName = Console.ReadLine();
+            Console.WriteLine("Thank you, now what is your last name?");
+            yourLastName = Console.ReadLine();
+            Console.WriteLine("Nice to meet you" + " " + yourFirstName + " " + yourLastName);
 
-            Console.WriteLine("Hello {0}", yourName);
-           
-           
+            int yourFirstNameLength = yourFirstName.Length;
+            int yourLastNameLength = yourLastName.Length;
+
+            if (yourFirstNameLength > yourLastNameLength)
+            {
+                Console.WriteLine("Your first name is longer than your last name.");
+            }
+
+            else if (yourFirstNameLength == yourLastNameLength)
+            {
+                Console.WriteLine("Your first and last names are the same length!");
+            }
+
+            else
+                          
+            {
+                Console.WriteLine("Your last name is longer.");
+
+              
+            }
+            Console.ReadKey();
+
         }
     }
 }
